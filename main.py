@@ -74,8 +74,11 @@ class FSM:
 
         # Continue with the rest of the sequence
         for state_input in sequence[1:]:
-            print('Current state is {}'.format(current_state))
+            print('Action: ' + str(state_input))
+            #print('Current state is {}'.format(current_state))
             current_state = self.__accept(current_state, state_input)
+            print('Resulting state: ' + str(current_state))
+            print('-=-=-=-=-=-=-=-')
             if current_state is None:
                 return False
 
